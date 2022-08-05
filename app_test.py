@@ -2,6 +2,7 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import squarify    # pip install squarify (algorithm for treemap)
+import seaborn as sns
 
 
 df = pd.read_excel('app_plans.xlsx')
@@ -33,21 +34,6 @@ df_main_uni["count"] =df_main_uni['count'].astype('int')
 squarify.plot(sizes=df_main_uni['count'], label=df_main_uni['ВУЗ'], alpha = 0.8)
 plt.axis('off')
 plt.show()
-
-
-# test_arr = ['a','a','b','c','c','c','e','e','e']
-# help_arr =[[x,test_arr.count(x)] for x in set(test_arr)]
-# print(help_arr)
-
-# numpy_array=np.array(help_arr)
-# df_help = pd.DataFrame(numpy_array, columns=['words', 'count'])
-# df_help["count"] =df_help['count'].astype('int')
-
-# result = df_help.dtypes
-
-# squarify.plot(sizes=df_help['count'], label=df_help['words'], alpha = 0.8)
-# plt.axis('off')
-# plt.show()
 
 
 
